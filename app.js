@@ -15,7 +15,7 @@ var mongoose = require("mongoose");
 
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/data");
+mongoose.connect("mongodb://<dbuser>:<dbpassword>@ds029828.mlab.com:29828/heroku_qdh3qffk");
 var nameSchema = new mongoose.Schema({
     
     
