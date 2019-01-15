@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="shortcut icon" href="images/logo.png" />
+     <title>IIITDM-Form</title>
+ <link rel="stylesheet" href="public/css/style.css">
+ <style>
+      @import url("https://fonts.googleapis.com/css?family=Pacifico");
+* {
+  box-sizing: border-box;
+}
+
+.birthday-container {
+  display: flex;
+ 
+  align-items: center;
+  justify-content: center;
+  background: #ededed;
+}
+
+.birthday-container__text {
+  font-family: 'Pacifico', cursive;
+  letter-spacing: .1rem;
+  color: #377D6A;
+  position: absolute;
+  z-index: 100;
+ 
+  font-size: 18vmin;
+  padding: 2vmin;
+  margin: 0;
+  text-align: center;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  left: 50%;
+  opacity: 0;
+  -webkit-animation: birthday-container__text 1s 2s forwards;
+          animation: birthday-container__text 1s 2s forwards;
+}
+
+@-webkit-keyframes birthday-container__text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes birthday-container__text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.birthday-container__graphic {
+  width: 100vmin;
+  height: 100vmin;
+  background: #ededed;
+  position: relative;
+}
+
+.cake {
+  width: 50%;
+  height: 45%;
+  position: absolute;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  border: 2vmin solid black;
+  bottom: 1vmin;
+  left: 50%;
+  border-radius: 10vmin 10vmin 0 0;
+  background: linear-gradient(to right, #fee5cb 0%, #fee5cb 8%, #facc93 9%, #facc93 100%);
+}
+.cake__bottom {
+  height: 15%;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  border-top: 1.5vmin solid black;
+  background: linear-gradient(to bottom, #e999c4 0%, #e999c4 20%, #377D6A 25%, #377D6A 100%);
+}
+.cake__bottom::before {
+  content: ' ';
+  position: absolute;
+  width: 9%;
+  height: 100%;
+  left: 0;
+  background: #FEE5CB;
+}
+.cake__top {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background: #32B9EC;
+  border-radius: 10vmin 10vmin 0 0;
+  border-bottom: 2vmin solid black;
+}
+.cake__top::before, .cake__top::after {
+  content: " ";
+  width: 6%;
+  height: 0%;
+  position: absolute;
+  background: #32B9EC;
+  border-radius: 0 0 10vmin 10vmin;
+  border: 2vmin solid black;
+  border-top: none;
+  top: 100%;
+  left: 20%;
+  -webkit-animation: cake__top-left 1.5s 1s forwards;
+          animation: cake__top-left 1.5s 1s forwards;
+}
+.cake__top::after {
+  left: 37%;
+  height: 0%;
+  -webkit-animation: cake__top-right 2s 1s forwards;
+          animation: cake__top-right 2s 1s forwards;
+}
+@-webkit-keyframes cake__top-left {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 140%;
+  }
+}
+@keyframes cake__top-left {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 140%;
+  }
+}
+@-webkit-keyframes cake__top-right {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 230%;
+  }
+}
+@keyframes cake__top-right {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 230%;
+  }
+}
+.cake__cherry {
+  position: absolute;
+  width: 17%;
+  height: 17%;
+  background: #377D6A;
+  border-radius: 50%;
+  border: 1.5vmin solid black;
+  top: -18%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  -webkit-animation: cake__cherry 1s forwards;
+          animation: cake__cherry 1s forwards;
+}
+.cake__cherry::before {
+  content: ' ';
+  width: 80%;
+  height: 60%;
+  position: absolute;
+  border-right: 1.5vmin solid black;
+  border-bottom: 1.5vmin solid black;
+  border-bottom-right-radius: 150%;
+  bottom: 100%;
+  left: 90%;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+@-webkit-keyframes cake__cherry {
+  0% {
+    -webkit-transform: translate(-50%, -5000%);
+            transform: translate(-50%, -5000%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+  }
+}
+@keyframes cake__cherry {
+  0% {
+    -webkit-transform: translate(-50%, -5000%);
+            transform: translate(-50%, -5000%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+  }
+}
+
+      
+      
+      
+      </style>
+  </head>
+  <body>
+
+<img src="images/HWlogo1.png" style="background: #377D6A; width: 100%;  border: solid white 1px;" />
+
+<div class="birthday-container" >
+  <h1 class="birthday-container__text">Thank you</h1>
+  <div class="birthday-container__graphic">
+    <div class="cake">
+      <div class="cake__bottom"></div>
+      <div class="cake__top"></div>
+      <div class="cake__cherry"></div>
+    </div>
+  </div>
+</div>
+   
+  
+     
+     <div class="container-fluid" style="padding-top: 30px">
+        <h5 style="color:green; text-align: center"> Form has been submitted successfully.
+        </h5>
+        <p>
+            An email has been sent to you for the confirmation.
+        </p>
+         
+         
+         
+     </div>
+      <footer class="footer d-none d-md-block" style="padding-top: 30px" >
+
+
+        <div class="row valign-wrapper" style="width: 100%; background-color: #377D6A; margin: 0">
+           
+            <div class="col s2">
+
+            </div>
+            <div class="col s5" style="min-width: 220px">
+                <h6 style="margin: 0;padding: 5px 15px 0 0; color: #edeaea;" align="right">&copy; IIITDM Kancheepuram 2018<br style="margin: 0"></h6>
+            </div>
+        </div>
+    </footer>
+  
+  <script  src="public/js/index.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>
