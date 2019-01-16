@@ -19,5 +19,8 @@
         "body-parser": "^1.18.3",
         "express": "^4.16.4",
         "nodemailer": "^4.7.0"
-    }
+    },
+    "engines": {
+    "node": "6.11.1"
+  }
 }
