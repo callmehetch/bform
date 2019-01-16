@@ -196,7 +196,7 @@ span:nth-child(3) .slide-up:active {
 			  		$("#login-button").removeAttr('disabled');
 				}, 
 				function(error) {
-					alert('Error : Failed to Load Library');
+					alert('Error : Failed to Load Google API Library');
 			  	}
 			);
 		},
@@ -232,7 +232,7 @@ $("#login-button").on('click', function() {
 		// On error
 		function(error) {
 			$("#login-button").removeAttr('disabled');
-			alert('Error : Login Failed');
+			alert(error);
 		}
 	);
 });
