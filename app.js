@@ -5,7 +5,7 @@ var path = require('path');
 var nodemailer = require('nodemailer');
 
 
-app.listen(process.env.PORT || 8080, () => console.log('IIIT Rocks'))
+app.listen(process.env.PORT || 3000, () => console.log('IIIT Rocks'))
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 var mongoose = require("mongoose");
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect("mongodb://itshemanthkumar:hemanth3219@ds157864.mlab.com:57864/bform", { useNewUrlParser: true });
 
 mongoose.Promise = global.Promise;
 
