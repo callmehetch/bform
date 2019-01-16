@@ -232,7 +232,7 @@ $("#login-button").on('click', function() {
 		// On error
 		function(error) {
 			$("#login-button").removeAttr('disabled');
-			alert(error);
+			alert(error.val);
 		}
 	);
 });
