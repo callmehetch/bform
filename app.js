@@ -62,8 +62,8 @@ var nameSchema = new mongoose.Schema({
 
 var User = mongoose.model("User", nameSchema);
 
-app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/index.html");
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 
