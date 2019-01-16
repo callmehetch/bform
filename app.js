@@ -1,9 +1,11 @@
 var express = require("express");
 var app = express();
-var port = 3000;
 var bodyParser = require('body-parser');
 var path = require('path');
 var nodemailer = require('nodemailer');
+
+
+app.listen(process.env.PORT || 8080, () => console.log('IIIT Rocks'))
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -103,6 +105,4 @@ app.post("/success", (req, res) => {
 });
 
 
-app.listen(port, () => {
-    console.log("Server listening on port " + port);
-});
+
