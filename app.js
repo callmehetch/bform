@@ -5,7 +5,7 @@ var path = require('path');
 var nodemailer = require('nodemailer');
 
 
-app.listen(process.env.PORT || 3000, () => console.log('IIIT Rocks'))
+app.listen(process.env.PORT || 3000, () => console.log('App is running successfully!'))
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -14,8 +14,6 @@ var transporter = nodemailer.createTransport({
         pass: 'hemanth3219'
     }
 });
-
-
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -64,11 +62,6 @@ var nameSchema = new mongoose.Schema({
 
 var User = mongoose.model("User", nameSchema);
 
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-
 app.post("/success", (req, res) => {
     var rname = req.body.rname;
     var myData = new User(req.body);
@@ -77,10 +70,8 @@ app.post("/success", (req, res) => {
 
     myData.save()
         .then(item => {
-            res.sendFile(__dirname + "/success.html");
-
-
-
+         res.sendFile(__dirname + "views/success.html");
+            
             const mailOptions = {
                 from: 'Hemanth<54321hemanth@gmail.com>',
                 to: req.body.rroll + '@iiitdm.ac.in',
@@ -94,17 +85,42 @@ app.post("/success", (req, res) => {
                     console.log(err)
                 else
                     console.log(info);
+               
             });
-
 
 
         
 
         })
         .catch(err => {
-            res.status(400).send("Unable to save to database");
+            res.status(400).send(err);
         });
 });
 
 
 
+    app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'views/index.html'));
+});
+
+
+app.get('/admin', function(req, res) {
+   
+    User.find({}, function(err, users) {
+  if (err) throw err;
+        
+        else{
+            
+            
+ 
+        
+  console.log(users);
+             }
+});
+    
+    
+});
+
+app.use("*", (req,res) => {
+		res.sendFile(path.join(__dirname, 'views/404.html'));
+	});
