@@ -16,7 +16,7 @@
     "homepage": "",
     "dependencies": {
         "body-parser": "^1.18.3",
-        "express": "^4.16.4",
+        "express": "^4.17.3",
         "mongoose": "^5.4.4",
         "nodemailer": "^4.7.0"
     },
